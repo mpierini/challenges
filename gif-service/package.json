@@ -1,0 +1,28 @@
+{
+  "name": "gif-service",
+  "version": "1.0.0",
+  "description": "Gif Service ============================",
+  "main": "search/index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "querystring": "^0.2.0",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+  	"start": "node search/index.js",
+    "test": "mocha -R nyan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpierini/gif-service.git"
+  },
+  "author": "mpierini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mpierini/gif-service/issues"
+  },
+  "homepage": "https://github.com/mpierini/gif-service#readme"
+}
