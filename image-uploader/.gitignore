@@ -1,0 +1,9 @@
+*.pyc
+
+static/
+
+# environment directory
+ENV/
+
+# db file
+db.sqlite3

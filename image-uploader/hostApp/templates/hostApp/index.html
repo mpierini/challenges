@@ -1,0 +1,21 @@
+<html>
+	<body>
+		Upload an image:
+		<form action="/upload/" method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			<input type="file" name="image" accept=".jpg, jpeg, .png, .gif">
+			<input type="submit" value="Submit" id="submit">
+			<input type="checkbox" name="private" value="True">Private?
+		</form>
+	</body>
+
+{% load static %}
+{% for upload in uploads %}
+	{% with 'hostApp/'|add:upload.filepath as image_static %}
+		<img src="{% static image_static %}" />
+	{% endwith %}
+{% endfor %}
+{% if id %}
+	<a href="/upload/{{ id }}">http://localhost:8000/upload/{{ id }}</a>
+{% endif %}
+</html>

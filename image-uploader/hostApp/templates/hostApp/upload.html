@@ -1,0 +1,8 @@
+<html>
+	<body>
+		{% load static %}
+		{% with 'hostApp/'|add:upload.filepath as image_static %}
+			<img src="{% static image_static %}" />
+		{% endwith %}
+	</body>
+</html>
